@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTLu Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="settings-panel">
+            <h1>UTLu Tic Tac Toe</h1>
+            <div class="input-group">
+                <label for="player1-name">Player 1 Name:</label>
+                <input type="text" id="player1-name" placeholder="Enter name or leave blank">
+            </div>
+            <div class="input-group">
+                <label for="player2-name">Player 2 Name (for Multiplayer):</label>
+                <input type="text" id="player2-name" placeholder="Enter name or leave blank">
+            </div>
+            <div class="mode-selection">
+                <button id="singleplayer-btn">Single Player</button>
+                <button id="multiplayer-btn">Multiplayer</button>
+            </div>
+            <div class="instagram-follow">
+                <p>Follow <a href="https://www.instagram.com/thelucrebag" target="_blank">The Lucrebag</a> on Instagram to play!</p>
+                <button id="follow-confirm-btn" disabled>I followed!</button>
+                <p id="follow-thankyou" style="display:none;">Thank you for following! You get 5 free hints.</p>
+            </div>
+        </div>
+
+        <div class="game-board" style="display:none;">
+            <div class="board-row">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+            </div>
+            <div class="board-row">
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+            </div>
+            <div class="board-row">
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="game-info">
+                <p id="player-turn"></p>
+                <button id="hint-btn" disabled>Hint (5)</button>
+                <button id="reset-btn">Reset Game</button>
+            </div>
+            <div id="turn-notification" class="notification-popup" style="display:none;">
+                <p id="next-player-text"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
